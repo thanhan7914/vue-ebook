@@ -65,7 +65,7 @@
                 :key="book.id"
                 class="views-row"
               >
-                <div class="views-field views-field-nothing">
+                <div class="views-field views-field-nothing" style="clear: right">
                   <span class="field-content">
                     <div class="smimg"><router-link :to="book.to"><img
                       :src="book.cover"
@@ -74,7 +74,10 @@
                       alt=""
                     ></router-link> </div>
                     <span class="smtitle"><router-link :to="book.to">{{ book.name }}</router-link></span><br>
-                    [{{ book.status }}] - <span class="smauthor">{{ book.author.name }}</span>
+                    [{{ book.status }}] - <router-link :to="book.author.to"><span class="smauthor">{{ book.author.name }}</span></router-link>
+                  </span>
+                  <span class="field-content" style="float: right;">
+                    tải lên {{ book.update_at }}
                   </span>
                 </div>
               </div>
@@ -88,7 +91,12 @@
           class="block block-views"
         >
           <h2>Tags</h2>
-          <div class="content" />
+          <div class="content" style="word-break: break-all;">
+            <span class="tag">Game of throne</span>
+            <span class="tag">trinh tham</span>
+            <span class="tag">vien tuong</span>
+            <span class="tag">George R. R. Martin</span>
+        </div>
         </div>
       </div>
       <div class="clear" />
@@ -136,17 +144,17 @@ export default {
       interestedBooks: [
         {
           id: 0,
-          to: '/name',
-          cover: 'https://gacsach.com/sites/gacsach.com/files/styles/vuong600/public/tieu-phu-ba.jpeg?itok=Q8vXb4xH',
-          title: 'ac thu tieu tu',
-          short_describe: 'Trong cuộc họp báo ra mắt sản phẩm mới, Chu Mộ Tu cho vợ mình nghĩ khẩu hiệu cổ...',
+          to: '/name-xx',
+          cover: 'https://isach.info/images/story/cover/nha_gia_kim__paulo_coelho.jpg',
+          title: 'Nhà Giả Kim',
+          short_describe: 'Chúng ta nên về thôi,” Gared giục khi thấy cánh rừng xung quanh tối dần. “Bọn dân du mục chết cả rồi.”...',
           category: {
             to: '',
             name: 'Tiểu thuyết'
           },
           author: {
-            to: '/kim-dung',
-            name: 'kim dung'
+            to: '/George-R-R-Martin',
+            name: 'Paulo Coelho'
           }
         },
         {
@@ -157,7 +165,7 @@ export default {
           short_describe: 'Trong cuộc họp báo ra mắt sản phẩm mới, Chu Mộ Tu cho vợ mình nghĩ khẩu hiệu cổ...',
           category: {
             to: '',
-            name: 'Tiểu thuyết tình yêu'
+            name: 'Tiểu thuyết'
           },
           author: {
             to: '/kim-dung',
@@ -182,12 +190,72 @@ export default {
         {
           id: 4,
           to: '/name',
-          cover: 'https://gacsach.com/sites/gacsach.com/files/styles/vuong600/public/tieu-phu-ba.jpeg?itok=Q8vXb4xH',
+          cover: 'https://isach.info/images/story/cover/tro_choi_vuong_quyen_2a_hau_due_cua_su_tu_vang__george_r_r_martin.jpg',
+          title: '2A - Hậu Duệ Của Sư...',
+          short_describe: 'Trong cuộc họp báo ra mắt sản phẩm mới, Chu Mộ Tu cho vợ mình nghĩ khẩu hiệu cổ...',
+          category: {
+            to: '',
+            name: 'Tiểu thuyết'
+          },
+          author: {
+            to: '/kim-dung',
+            name: 'kim dung'
+          }
+        },
+        {
+          id: 4,
+          to: '/name',
+          cover: 'https://isach.info/images/story/cover/tro_choi_vuong_quyen_2a_hau_due_cua_su_tu_vang__george_r_r_martin.jpg',
+          title: '2A - Hậu Duệ Của Sư...',
+          short_describe: 'Trong cuộc họp báo ra mắt sản phẩm mới, Chu Mộ Tu cho vợ mình nghĩ khẩu hiệu cổ...',
+          category: {
+            to: '',
+            name: 'Tiểu thuyết'
+          },
+          author: {
+            to: '/kim-dung',
+            name: 'kim dung'
+          }
+        },
+        {
+          id: 0,
+          to: '/name-xx',
+          cover: 'https://isach.info/images/story/cover/tro_choi_vuong_quyen_1a_soi_tuyet_thanh_winterfell__george_r_r_martin.jpg',
+          title: '1A - Sói Tuyết Thành...',
+          short_describe: 'Chúng ta nên về thôi,” Gared giục khi thấy cánh rừng xung quanh tối dần. “Bọn dân du mục chết cả rồi.”...',
+          category: {
+            to: '',
+            name: 'Tiểu thuyết'
+          },
+          author: {
+            to: '/George-R-R-Martin',
+            name: 'George R. R. Martin'
+          }
+        },
+        {
+          id: 2,
+          to: '/name',
+          cover: 'https://gacsach.com/sites/gacsach.com/files/styles/vuong600/public/7.jpg?itok=Qpu38-NB',
           title: 'ac thu tieu tu',
           short_describe: 'Trong cuộc họp báo ra mắt sản phẩm mới, Chu Mộ Tu cho vợ mình nghĩ khẩu hiệu cổ...',
           category: {
             to: '',
-            name: 'Tiểu thuyết tình yêu'
+            name: 'Tiểu thuyết'
+          },
+          author: {
+            to: '/kim-dung',
+            name: 'kim dung'
+          }
+        },
+        {
+          id: 3,
+          to: '/name',
+          cover: 'https://gacsach.com/sites/gacsach.com/files/styles/vuong600/public/5.jpg?itok=v_y8EpA8',
+          title: 'ac thu tieu tu',
+          short_describe: 'Trong cuộc họp báo ra mắt sản phẩm mới, Chu Mộ Tu cho vợ mình nghĩ khẩu hiệu cổ...',
+          category: {
+            to: '',
+            name: 'Trinh tham'
           },
           author: {
             to: '/kim-dung',
@@ -197,92 +265,28 @@ export default {
       ],
       newBooks: [
         {
-          id: 1,
-          cover: 'https://gacsach.com/sites/gacsach.com/files/styles/45x68/public/khe-uoc-hao-mon.jpg?itok=VqVj3qe_',
-          name: 'ac thu tieu tu',
-          to: '/book/acthutieutu',
-          author: {
-            name: 'kim dung',
-            to: '/author/kim-dung'
-          },
-          status: 'Full'
-        },
-        {
-          id: 2,
-          cover: 'https://gacsach.com/sites/gacsach.com/files/styles/45x68/public/khe-uoc-hao-mon.jpg?itok=VqVj3qe_',
-          name: 'ac thu tieu tu',
-          to: '/book/acthutieutu',
-          author: {
-            name: 'kim dung',
-            to: '/author/kim-dung'
-          },
-          status: 'Full'
-        },
-        {
-          id: 3,
-          cover: 'https://gacsach.com/sites/gacsach.com/files/styles/45x68/public/khe-uoc-hao-mon.jpg?itok=VqVj3qe_',
-          name: 'ac thu tieu tu',
-          to: '/book/acthutieutu',
-          author: {
-            name: 'kim dung',
-            to: '/author/kim-dung'
-          },
-          status: 'Full'
-        },
-        {
-          id: 4,
-          cover: 'https://gacsach.com/sites/gacsach.com/files/styles/45x68/public/khe-uoc-hao-mon.jpg?itok=VqVj3qe_',
-          name: 'ac thu tieu tu',
-          to: '/book/acthutieutu',
-          author: {
-            name: 'kim dung',
-            to: '/author/kim-dung'
-          },
-          status: 'Full'
-        },
-        {
-          id: 5,
-          cover: 'https://gacsach.com/sites/gacsach.com/files/styles/45x68/public/khe-uoc-hao-mon.jpg?itok=VqVj3qe_',
-          name: 'ac thu tieu tu',
-          to: '/book/acthutieutu',
-          author: {
-            name: 'kim dung',
-            to: '/author/kim-dung'
-          },
-          status: 'Full'
-        },
-        {
-          id: 6,
-          cover: 'https://gacsach.com/sites/gacsach.com/files/styles/45x68/public/khe-uoc-hao-mon.jpg?itok=VqVj3qe_',
-          name: 'ac thu tieu tu',
-          to: '/book/acthutieutu',
-          author: {
-            name: 'kim dung',
-            to: '/author/kim-dung'
-          },
-          status: 'Full'
-        },
-        {
           id: 7,
-          cover: 'https://gacsach.com/sites/gacsach.com/files/styles/45x68/public/khe-uoc-hao-mon.jpg?itok=VqVj3qe_',
-          name: 'ac thu tieu tu',
+          cover: 'https://isach.info/images/story/cover/tro_choi_vuong_quyen_2a_hau_due_cua_su_tu_vang__george_r_r_martin.jpg',
+          name: 'Trò Chơi Vương Quyền 2A - Hậu Duệ Của Sư Tử Vàng',
           to: '/book/acthutieutu',
           author: {
-            name: 'kim dung',
+            name: 'George R. R. Martin',
             to: '/author/kim-dung'
           },
-          status: 'Full'
+          status: 'Full',
+          update_at: '11/12/2011'
         },
         {
           id: 8,
-          cover: 'https://gacsach.com/sites/gacsach.com/files/styles/45x68/public/khe-uoc-hao-mon.jpg?itok=VqVj3qe_',
-          name: 'ac thu tieu tu',
+          cover: 'https://isach.info/images/story/cover/tro_choi_vuong_quyen_1a_soi_tuyet_thanh_winterfell__george_r_r_martin.jpg',
+          name: 'Trò Chơi Vương Quyền - Tập 1A: Sói Tuyết Thành Winterfell',
           to: '/book/acthutieutu',
           author: {
-            name: 'kim dung',
+            name: 'George R. R. Martin',
             to: '/author/kim-dung'
           },
-          status: 'Full'
+          status: 'Full',
+          update_at: '12/12/2018'
         }
       ]
     }
@@ -310,6 +314,9 @@ export default {
   width: 100%;
   height : 350px;
   object-fit: cover;
+}
+.field-content img.full-width:hover {
+  box-shadow: 1px 1px 1px #c0c0c0;
 }
 .v-card .views-field-taxonomy-vocabulary-2, .v-card .views-field-field-mucsach {
   line-height: 22px;

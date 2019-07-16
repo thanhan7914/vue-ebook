@@ -34,7 +34,7 @@
     </div>
     <div class="footer padlr140 float-end">
       <span>
-        © 2019. Tổng hợp và sửa lỗi chính tả các tác phẩm có trên mạng internet.
+         Copyright © 2019.
       </span>
     </div>
   </section>
