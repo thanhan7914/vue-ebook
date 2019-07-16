@@ -60,7 +60,11 @@
           <h2>Sách Truyện mới cập nhật <span class="glyphicon glyphicon-menu-right" /></h2>
           <div class="view view-sachmoi view-id-sachmoi view-display-id-block_1 view-dom-id-46da9d3047d5c6607b06a42a261e9350">
             <div class="view-content">
-              <div v-for="book in newBooks" :key="book.id" class="views-row">
+              <div
+                v-for="book in newBooks"
+                :key="book.id"
+                class="views-row"
+              >
                 <div class="views-field views-field-nothing">
                   <span class="field-content">
                     <div class="smimg"><router-link :to="book.to"><img
@@ -84,12 +88,14 @@
           class="block block-views"
         >
           <h2>Tags</h2>
-          <div class="content">
-
-          </div>
+          <div class="content" />
         </div>
       </div>
       <div class="clear" />
+    </div>
+    <div class="qoutes">
+      <q>Maybe life is random, but I doubt it.</q>
+      <span class="qoutes-author">Steven Tyler</span>
     </div>
     <the-foot />
   </section>
@@ -200,6 +206,83 @@ export default {
             to: '/author/kim-dung'
           },
           status: 'Full'
+        },
+        {
+          id: 2,
+          cover: 'https://gacsach.com/sites/gacsach.com/files/styles/45x68/public/khe-uoc-hao-mon.jpg?itok=VqVj3qe_',
+          name: 'ac thu tieu tu',
+          to: '/book/acthutieutu',
+          author: {
+            name: 'kim dung',
+            to: '/author/kim-dung'
+          },
+          status: 'Full'
+        },
+        {
+          id: 3,
+          cover: 'https://gacsach.com/sites/gacsach.com/files/styles/45x68/public/khe-uoc-hao-mon.jpg?itok=VqVj3qe_',
+          name: 'ac thu tieu tu',
+          to: '/book/acthutieutu',
+          author: {
+            name: 'kim dung',
+            to: '/author/kim-dung'
+          },
+          status: 'Full'
+        },
+        {
+          id: 4,
+          cover: 'https://gacsach.com/sites/gacsach.com/files/styles/45x68/public/khe-uoc-hao-mon.jpg?itok=VqVj3qe_',
+          name: 'ac thu tieu tu',
+          to: '/book/acthutieutu',
+          author: {
+            name: 'kim dung',
+            to: '/author/kim-dung'
+          },
+          status: 'Full'
+        },
+        {
+          id: 5,
+          cover: 'https://gacsach.com/sites/gacsach.com/files/styles/45x68/public/khe-uoc-hao-mon.jpg?itok=VqVj3qe_',
+          name: 'ac thu tieu tu',
+          to: '/book/acthutieutu',
+          author: {
+            name: 'kim dung',
+            to: '/author/kim-dung'
+          },
+          status: 'Full'
+        },
+        {
+          id: 6,
+          cover: 'https://gacsach.com/sites/gacsach.com/files/styles/45x68/public/khe-uoc-hao-mon.jpg?itok=VqVj3qe_',
+          name: 'ac thu tieu tu',
+          to: '/book/acthutieutu',
+          author: {
+            name: 'kim dung',
+            to: '/author/kim-dung'
+          },
+          status: 'Full'
+        },
+        {
+          id: 7,
+          cover: 'https://gacsach.com/sites/gacsach.com/files/styles/45x68/public/khe-uoc-hao-mon.jpg?itok=VqVj3qe_',
+          name: 'ac thu tieu tu',
+          to: '/book/acthutieutu',
+          author: {
+            name: 'kim dung',
+            to: '/author/kim-dung'
+          },
+          status: 'Full'
+        },
+        {
+          id: 8,
+          cover: 'https://gacsach.com/sites/gacsach.com/files/styles/45x68/public/khe-uoc-hao-mon.jpg?itok=VqVj3qe_',
+          name: 'ac thu tieu tu',
+          to: '/book/acthutieutu',
+          author: {
+            name: 'kim dung',
+            to: '/author/kim-dung'
+          },
+          status: 'Full'
         }
       ]
     }
@@ -271,6 +354,14 @@ export default {
     text-transform: uppercase;
     color:#2980b9;
 }
+.sachmoi .smtitle a {
+    font-size: 16px;
+    line-height: 14px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    color: #4E4E4E;
+    font-family: 'Roboto Condensed';
+}
 .view-sachmoi .views-row {
     display: block!important;
     border-bottom: 1px dashed #CCC;
@@ -280,6 +371,9 @@ export default {
 }
 .view-sachmoi .views-field {
     line-height: 27px;
+}
+.smimg {
+  margin-right 6px
 }
 .smimg, .tvanh {
     float: left;
@@ -319,6 +413,25 @@ export default {
 }
 .body-content {
   padding: 12px 24px 12px 24px;
+}
+.qoutes {
+  vertical-align: baseline;
+  text-align: center;
+  margin-top: 48px;
+  margin-bottom: 68px;
+}
+.qoutes q {
+  font-family: monospace;
+  font-size: 24px;
+  color: #809F14;
+}
+.qoutes-author {
+  position: relative;
+  top: 28px;
+  right: 120px;
+  font-family: monospace;
+  font-size: 24px;
+  color: #d35400;
 }
 @media screen and (max-width: 1100px) {
   .v-card {
